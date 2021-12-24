@@ -1,0 +1,51 @@
+* {
+    margin: -3;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: cursive;
+}
+
+header>div {
+    float: right;
+    margin-right: 5%;
+}
+
+header>div>a {
+    text-decoration: underline blue;
+}
+
+.alineado {
+    display: inline-block;
+}
+
+.alineado75 {
+    width: 75%;
+    display: inline-block;
+}
+
+.alineado22 {
+    width: 22%;
+    display: inline-block;
+}
+
+.alineado49 {
+    width: 49%;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+table {
+    border-collapse: collapse;
+    margin-left: 4%;
+    margin-bottom: 2%;
+}
+
+table,
+td,
+th {
+    border: 1px solid black;
+}
+
+footer {
+    text-align: center;
+}

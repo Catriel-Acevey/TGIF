@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+
+<body>
+    <header>
+        <h1>TGIF Logo</h1>
+    </header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="index.html">Home<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                    Congress 113
+                                            </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="senate-data.html">Senate</a>
+                        <a class="dropdown-item" href="house-data.html">House</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                        Attendance
+                                                </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="senate-attendance.html">Senate</a>
+                        <a class="dropdown-item" href="house-attendance.html">House</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                        Party Loyalty
+                                                </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="senate-party.html">Senate</a>
+                        <a class="dropdown-item" href="house-party.html">House</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <section>
+        <h2>Senators</h2>
+        <p>First convened in 1789, the composition and powers of the Senate are established in Article One of the U.S. Constitution. Each state is represented by two senators, regardless of population, who serve staggered six-year terms. The Senate has several
+            exclusive powers not granted to the House, including consenting to treaties as a precondition to their ratification and consenting to or confirming appointments of Cabinet secretaries, federal judges, other federal executive officials, military
+            officers, regulatory officials, ambassadors, and other federal uniformed officers, as well as trial of federal officials impeached by the House.
+        </p>
+        <table id="senate-data">
+            <thead>
+                <th>Full Name</th>
+                <th>Party</th>
+                <th>State</th>
+                <th>Ages</th>
+                <th>% of Votes</th>
+            </thead>
+            <tbody id="mitabla">
+
+            </tbody>
+        </table>
+    </section>
+    <footer class="py-3 my-4">
+        <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+          
+        </ul>
+        <p class="text-center text-muted">@2016 TGIF | All Rights Reserved</p>
+      </footer>
+    <script src="pro-congress-113-senate.js"></script>
+    <script>
+        var senadores = dataSenate.results[0].members;
+
+        function getName(string) {
+            if (string != null) {
+                return string;
+            } else {
+                return ("");
+            }
+        }
+
+        function tablearSenadores(array) {
+            var caja = array.map(function(senador) {
+                return "<tr><td>" + getName(senador.first_name) + " " + getName(senador.middle_name) + " " + getName(senador.last_name) + "</td><td>" + senador.party + "</td><td>" + senador.state + "</td><td>" + senador.seniority + "</td><td>" + "%" + senador.votes_with_party_pct + "</tr>";
+            });
+            document.getElementById("mitabla").innerHTML = caja.join("");
+        }
+        tablearSenadores(senadores);
+    </script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+</body>
