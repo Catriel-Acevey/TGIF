@@ -12,7 +12,8 @@ Esto es un pagina que hice como parte de mi educación en [MindHub](https://mind
 # Como iniciar el proyecto
 
  - Clonar el repositorio en su computadora
- - Ejecutar el archivo `index.html`
+ - Ejecutar el archivo `index.html` en la carpeta `public`
+ - También puedes probarla [Aquí](https://tgif-page.web.app/)
  
  # Vista previa
 
