@@ -2,6 +2,10 @@
 
 Esto es un pagina que hice como parte de mi educación en [MindHub](https://mindhubweb.com/), que consistió en crear una pagina en la que consumia datos en formato JSON de 2 archivos y hacia calculos sobre ellos para luego mostrarlos.
 
+<p>
+  <img src="./public/Email and files m2task3/logo.png" />
+</p>
+
 ## Tecnologías usadas
 
 - Front End:
