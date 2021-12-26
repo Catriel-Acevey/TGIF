@@ -13,6 +13,11 @@ Esto es un pagina que hice como parte de mi educación en [MindHub](https://mind
     + CSS - Bootsrap
     + Javascript
 
+- Deploy:
+    + Firebase
+
+
+
 # Como iniciar el proyecto
 
  - Clonar el repositorio en su computadora
